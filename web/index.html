@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="SafeHer - Girls' Safety Application">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="SafeHer">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>SafeHer</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #FFF5F8;
+    }
+    #loading-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      text-align: center;
+    }
+    .app-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: #D81B60;
+      margin-bottom: 6px;
+    }
+    .app-subtitle {
+      font-size: 14px;
+      color: #757575;
+      margin-bottom: 24px;
+    }
+    .spinner {
+      width: 44px;
+      height: 44px;
+      border: 4px solid #F8BBD0;
+      border-top: 4px solid #D81B60;
+      border-radius: 50%;
+      animation: spin 0.9s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Visible loading state while Flutter Web engine initializes -->
+  <div id="loading-container">
+    <div class="app-title">🛡️ SafeHer</div>
+    <div class="app-subtitle">Starting SafeHer, please wait...</div>
+    <div class="spinner"></div>
+  </div>
+
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
